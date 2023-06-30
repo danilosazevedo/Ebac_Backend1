@@ -1,0 +1,16 @@
+Rotina de despertar ao amanhecer em Portugol
+
+INÍCIO
+1. Se alarme toca;
+2. Acordar;
+3. Espreguiçar
+4. Desligar ar condicionado
+5. Levantar da cama
+6. Ir tomar banho
+7. Se banheiro ocupado
+7.1 Ir tomar café
+8. Se banheiro livre
+8.1 Tomar banho
+9. Tomar café
+10. Estudar conteúdo da EBAC
+FIM
