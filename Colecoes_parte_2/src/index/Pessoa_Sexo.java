@@ -7,13 +7,11 @@ import java.util.List;
 public class Pessoa_Sexo {
 
 	public static void main(String[] args) {
-//		Criar um programa que leia um nome e o sexo. Separar por grupos M e F
 		pessoasPorSexo();
 
 	}
 
 	private static void pessoasPorSexo(){
-		System.out.println("***Lista Geral**");
 
 		List<Pessoa> lista = new ArrayList<>();
 		Pessoa a = new Pessoa("Danilo Azevedo", "M");
@@ -29,12 +27,32 @@ public class Pessoa_Sexo {
 		lista.add(e);
 		lista.add(f);
 		
+		List<Pessoa> listaHomens = new ArrayList<>();
+		List<Pessoa> listaMulheres = new ArrayList<>();
+		
+		for(Pessoa pessoa : lista) {
+			if(pessoa.getSexo().equals("M")) {
+				listaHomens.add(pessoa);
+			}else{
+				listaMulheres.add(pessoa);
+			}
+		}
+		
+		System.out.println("***Lista Geral**");
 		System.out.println(lista);
 		System.out.println(" ");
 
-		System.out.println("***Lista Homens**");
+		System.out.println("***Lista Geral Ordenada**");
 		Collections.sort(lista);
 		System.out.println(lista);
+		System.out.println(" ");
+		
+		System.out.println("***Lista Homens**");
+		System.out.println(listaHomens);
+		System.out.println(" ");
+		
+		System.out.println("***Lista Mulheres**");
+		System.out.println(listaMulheres);
 	}
 
 }

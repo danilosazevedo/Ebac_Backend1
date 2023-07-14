@@ -3,7 +3,7 @@ package index;
 public class Pessoa implements Comparable<Pessoa> {
 	@Override
 	public String toString() {
-		return nome +","+ sexo;
+		return nome +"-"+ sexo;
 	}
 
 	private String nome;
@@ -25,7 +25,7 @@ public class Pessoa implements Comparable<Pessoa> {
 	@Override
 	public int compareTo(Pessoa pessoa) {
 		// TODO Auto-generated method stub
-		return this.sexo.compareTo(pessoa.getSexo());
+		return this.nome.compareTo(pessoa.getNome());
 	}
 
 }
