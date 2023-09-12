@@ -1,6 +1,6 @@
 package domain;
 
-public class Cliente {
+public class Produto {
 	
 	private Long id;
 	

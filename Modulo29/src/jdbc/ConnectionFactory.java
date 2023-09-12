@@ -12,19 +12,21 @@ public class ConnectionFactory {
 		
 	}
 
-	public static Connection getConnection() {
+	public static Connection getConnection() throws SQLException {
 		if (connection == null) {
+			connection = initConnection();
+		} else if (connection != null && connection.isClosed()) {
 			connection = initConnection();
 		}
 		return connection;
 	}
 	
 	private static Connection initConnection() {
-		try {
+        try {
             return DriverManager.getConnection(
-            		"jdbc:postgresql://localhost:15432/module29Ebac", "postgres", "admin");
+            		"jdbc:postgresql://localhost:5432/module29Ebac", "postgres", "22101993");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-	}
+    }
 }
